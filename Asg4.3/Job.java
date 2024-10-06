@@ -31,6 +31,21 @@ public abstract class Job{
         return Period.between(startDate, endDateForCalculation);
     }
 
+    public String getJobDuration(Period d){
+        String str = "";
+        if(d.getYears() > 0){
+            str += d.getYears() + " year(s) ";
+        }
+        if(d.getMonths() > 0){
+            str += d.getMonths() + " month(s) ";
+        }
+        if(d.getDays() > 0){
+            str += d.getDays() + " day(s)";
+        }
+
+        return str;
+    }
+
     //asks questions that each have a different score and then give an overall score of their job satisfactions out of 100 points
     public int assessJobSatisfaction(){
         Scanner scn = new Scanner(System.in);

@@ -29,7 +29,7 @@ public class FullTimeJob extends Job {
     public void displayJobDetails(){
         System.out.println("Company: " + getCompanyName());
         System.out.println("Position: " + getPosition());
-        System.out.println("Start date: " + getStartDate() + "(" + calculateJobDuration() + ")");
+        System.out.println("Start date: " + getStartDate() + "(" + getJobDuration(calculateJobDuration()) + ")");
         System.out.println("Annual salary: " + calculateAnnualSalary());
         System.out.println("Eligible for promotion? " + isEligibleForPromotion());
         System.out.println("Job satisfaction (out of 100): " + assessJobSatisfaction());

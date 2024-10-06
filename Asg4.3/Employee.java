@@ -21,6 +21,7 @@ public class Employee {
         if (jobHistory.isEmpty()){
             System.out.println("No job history.");
         } else{
+            System.out.println(name + "'s job history: ");
             for(Job job : jobHistory){
                 job.displayJobDetails();
                 System.out.println();
