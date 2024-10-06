@@ -31,6 +31,7 @@ public abstract class Job{
         return Period.between(startDate, endDateForCalculation);
     }
 
+    //takes the results from calculateJobDuration and turns it into a legible string that can be output because the Period returns an unlegible result
     public String getJobDuration(Period d){
         String str = "";
         if(d.getYears() > 0){
