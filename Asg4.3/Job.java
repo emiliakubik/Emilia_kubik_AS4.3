@@ -8,6 +8,7 @@ public abstract class Job{
     private LocalDate startDate;
     private LocalDate endDate;
 
+    //constructor sets company name, work position, start date and end date
     public Job(String companyName, String position, LocalDate startDate, LocalDate endDate){
         this.companyName = companyName;
         this.position = position;
@@ -15,8 +16,10 @@ public abstract class Job{
         this.endDate = endDate;
     }
 
+    //method to display all job details is abstract because details will be different between job types (subclasses)
     public abstract void displayJobDetails();
 
+    //calculates years, months, and days between start date and end date, if no end date, calculate until today
     public Period calculateJobDuration(){
         LocalDate endDateForCalculation;
         if (endDate != null){
@@ -28,6 +31,7 @@ public abstract class Job{
         return Period.between(startDate, endDateForCalculation);
     }
 
+    //asks questions that each have a different score and then give an overall score of their job satisfactions out of 100 points
     public int assessJobSatisfaction(){
         Scanner scn = new Scanner(System.in);
         int satisfactionScore = 0;
@@ -52,6 +56,8 @@ public abstract class Job{
 
         return satisfactionScore;
     }
+
+    //getter methods to return all 4 properties
 
     public String getCompanyName(){
         return companyName;

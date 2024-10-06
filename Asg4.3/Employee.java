@@ -5,15 +5,18 @@ public class Employee {
     private String name;
     private List<Job> jobHistory;
 
+    //constructor method sets employees name and instantiates a new array list
     public Employee(String name){
         this.name = name;
         this.jobHistory = new ArrayList<>();
     }
 
+    //adds job to the array list- this is of Job type, so essentially adds all the info added from Job class
     public void addJob(Job job){
         jobHistory.add(job);
     }
 
+    //lists out all the info from every job in this person's history by calling Job's display job info method
     public void displayJobHistory(){
         if (jobHistory.isEmpty()){
             System.out.println("No job history.");
@@ -25,6 +28,7 @@ public class Employee {
         }
     }
 
+    //getter methods return the 2 properties that are individual to this subclass
     public String getName(){
         return name;
     }
