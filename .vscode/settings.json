@@ -1,0 +1,12 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "Asg3.1/CSC325EmiliaKubik",
+        "Asg4.3",
+        "GoldTeam/GoldProject/src",
+        "HelloWorld/src"
+    ],
+    "java.project.referencedLibraries": [
+        "Databases/lib/sqlite-jdbc-3.47.0.0.jar"
+    ]
+}
